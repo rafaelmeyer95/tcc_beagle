@@ -5,7 +5,7 @@
 %Sistema subamortecido
 qsi = 0.45;
 wn = 2;
-sys = tf([wn^2],[1 2*qsi*wn wn^2]);
+sys = tf([wn^2],[1 2*qsi*wn wn^2]); % Cria uma função de transferência a partir dos coeficientes do numerados e denominador
 
 step(sys)                               %Simulação da resposta ao degrau do sistema
 
