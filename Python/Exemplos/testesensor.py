@@ -15,6 +15,9 @@ import adafruit_vl53l0x
 i2c = busio.I2C(board.SCL, board.SDA)
 vl53 = adafruit_vl53l0x.VL53L0X(i2c)
 
+#vl53.measurement_timing_budget = 20000 #maior velocidade e menor precisão
+vl53.measurement_timing_budget = 200000 #menor velocidade e maior precisão
+
 
 while True:  
     print("Distância: {0}mm ".format(vl53.range))
